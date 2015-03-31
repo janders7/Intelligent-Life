@@ -6,6 +6,7 @@ package character_classes;
 import game_classes.Game;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * @author Alejandro Guzman
@@ -34,11 +35,22 @@ public class CharacterTester {
 		p.setInventory(inv);
 
 		System.out.println(m);
-		System.out.println(p);
-		
-		Game g = new Game();
-		System.out.println(g.getInventory(p));
-		System.out.println(g.getStatistics(p));
-	}
+		System.out.println("\n" + p);
 
+		Game g = new Game();
+
+		System.out.println("\n" + g.getInventory(p));
+		System.out.println("\n" + g.getStatistics(p));
+		System.out.println("\n" + g.getHelp());
+
+		HashMap<String, String> map = new HashMap<>();
+		map.put("ale", "12345");
+		g.setUsernamePasswordMap(map);
+		System.out.println("\n" + map);
+
+		System.out.println("\nnewUserLogin()...");
+		g.newUserLogin();
+		System.out.println("\nexistingUserLogin()...");
+		g.existingUserLogin();
+	}
 }
