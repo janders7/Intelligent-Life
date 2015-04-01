@@ -1,4 +1,4 @@
-package puzzles;
+package puzzle_classes;
 
 public class Riddle extends Puzzle {
 
@@ -37,7 +37,7 @@ public class Riddle extends Puzzle {
 		// player.setHealth(0);
 		return false;}
 	 else{
-	System.out.println("Incorect entry. Please try again!");
+	System.out.println("Incorrect entry. Please try again!");
 	return false;
 	}
 }

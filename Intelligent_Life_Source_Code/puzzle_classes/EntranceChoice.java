@@ -1,4 +1,4 @@
-package puzzles;
+package puzzle_classes;
 
 public class EntranceChoice extends Puzzle {
 
@@ -9,13 +9,13 @@ public class EntranceChoice extends Puzzle {
 
 	@Override
 	public boolean solvingPuzzle(String userInput) {
-		if(userInput.equalsIgnoreCase("right door"))
-		{//proceede next room
+		if (userInput.equalsIgnoreCase("right door")) { // proceed next room
 			return true;
-			}else{System.out.println("failed try again");
+		} else {
+			System.out.println("failed try again");
 			return false;
 		}
-		
+
 	}
 
 }
