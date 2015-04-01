@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import room_classes.Room;
 import character_classes.Player;
 
 /**
@@ -149,7 +150,7 @@ public class Game {
 			// add username and password to map
 			usernamePasswordMap.put(username, password);
 			System.out.println("Account created successfully.");
-			System.out.println(usernamePasswordMap);
+			//System.out.println(usernamePasswordMap);
 		} else {
 			System.out
 					.println("The username already exists. Please create another username "

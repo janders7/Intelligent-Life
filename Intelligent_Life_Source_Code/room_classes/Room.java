@@ -1,7 +1,7 @@
 /**
  * 
  */
-package room_class;
+package room_classes;
 
 import java.util.Random;
 
@@ -15,9 +15,9 @@ public class Room {
 
 	public Room(int monsterChance, int puzzleChance, int itemChance,
 			int roomNumber) {
-		this.hasMonster = containsMonster(monsterChance);
-		this.hasPuzzle = containsPuzzle(puzzleChance);
-		this.hasItem = containsItem(itemChance);
+		this.hasMonster = doesContain(monsterChance);
+		this.hasPuzzle = doesContain(puzzleChance);
+		this.hasItem = doesContain(itemChance);
 		this.description = roomDescriptions(roomNumber);
 	}
 
@@ -46,100 +46,81 @@ public class Room {
 		return description;
 	}
 
-	public boolean containsMonster(int monsterChance) {
-		boolean result = false;
+	public boolean doesContain(int chance) {
+		boolean contains = false;
 		this.randomNumber = generator.nextInt(100) + 1;
-
-		if (this.randomNumber <= monsterChance)
-			result = true;
-
-		return result;
-	}
-
-	public boolean containsPuzzle(int puzzleChance) {
-		boolean result = false;
-		this.randomNumber = generator.nextInt(100) + 1;
-
-		if (this.randomNumber <= puzzleChance)
-			result = true;
-
-		return result;
-	}
-
-	public boolean containsItem(int itemChance) {
-		boolean result = false;
-		this.randomNumber = generator.nextInt(100) + 1;
-
-		if (this.randomNumber <= itemChance)
-			result = true;
-
-		return result;
+		if (this.randomNumber <= chance) {
+			contains = true;
+		}
+		return contains;
 	}
 
 	public String roomDescriptions(int roomNumber) {
+		String description = "";
 		if (roomNumber == 1) {
-			return "";
+			description = "";
 		} else if (roomNumber == 2) {
-			return "";
+			description = "";
 		} else if (roomNumber == 3) {
-			return "";
+			description = "";
 		} else if (roomNumber == 4) {
-			return "";
+			description = "";
 		} else if (roomNumber == 5) {
-			return "";
+			description = "";
 		} else if (roomNumber == 6) {
-			return "";
+			description = "";
 		} else if (roomNumber == 7) {
-			return "";
+			description = "";
 		} else if (roomNumber == 8) {
-			return "";
+			description = "";
 		} else if (roomNumber == 9) {
-			return "";
+			description = "";
 		} else if (roomNumber == 10) {
-			return "";
+			description = "";
 		} else if (roomNumber == 11) {
-			return "";
+			description = "";
 		} else if (roomNumber == 12) {
-			return "";
+			description = "";
 		} else if (roomNumber == 13) {
-			return "";
+			description = "";
 		} else if (roomNumber == 14) {
-			return "";
+			description = "";
 		} else if (roomNumber == 15) {
-			return "";
+			description = "";
 		} else if (roomNumber == 16) {
-			return "";
+			description = "";
 		} else if (roomNumber == 17) {
-			return "";
+			description = "";
 		} else if (roomNumber == 18) {
-			return "";
+			description = "";
 		} else if (roomNumber == 19) {
-			return "";
+			description = "";
 		} else if (roomNumber == 20) {
-			return "";
+			description = "";
 		} else if (roomNumber == 21) {
-			return "";
+			description = "";
 		} else if (roomNumber == 22) {
-			return "";
+			description = "";
 		} else if (roomNumber == 23) {
-			return "";
+			description = "";
 		} else if (roomNumber == 24) {
-			return "";
+			description = "";
 		} else if (roomNumber == 25) {
-			return "";
+			description = "";
 		} else if (roomNumber == 26) {
-			return "";
+			description = "";
 		} else if (roomNumber == 27) {
-			return "";
+			description = "";
 		} else if (roomNumber == 28) {
-			return "";
+			description = "";
 		} else if (roomNumber == 29) {
-			return "";
+			description = "";
 		} else if (roomNumber == 30) {
-			return "";
+			description = "";
 		} else {
-			return "You are lost";
+			description = "You are lost";
 		}
+		return description;
 	}
 
 }

@@ -23,11 +23,11 @@ public abstract class Character {
 		this.name = name;
 		healthPoints = 100; // set default health to 100
 		Random r = new Random();
-		int rand = r.nextInt((50) + 1); // random number for monster and player
+		int rand = r.nextInt((50 - 20) + 1) + 20; // random number for monster and player
 										// may have to be within a certain range
 										// of each other
 		attackPoints = rand; // sets the attack to a pseudo-random number
-								// between 0 and 50
+								// between 20 and 50
 	}
 
 	/**
