@@ -133,7 +133,7 @@ public class Room {
 		} else if (roomNumber == 30) {
 			return "";
 		} else {
-			return "You are lost";
+			return "You are lost.";
 		}
 	}
 
