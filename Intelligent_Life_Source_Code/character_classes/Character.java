@@ -46,7 +46,7 @@ public abstract class Character {
 	 * 
 	 * @return
 	 */
-	protected boolean isAlive() {
+	public boolean isAlive() {
 		boolean isAlive = true;
 		if (healthPoints <= 0) {
 			isAlive = false;
@@ -58,7 +58,7 @@ public abstract class Character {
 	 * 
 	 * @param c
 	 */
-	protected void attack(Character c) {
+	public void attack(Character c) {
 		int damage = attackPoints; // plus the weapons points
 		c.healthPoints = c.healthPoints - damage;
 	}
@@ -67,6 +67,38 @@ public abstract class Character {
 	public String toString() {
 		return "Character [name=" + name + ", healthPoints=" + healthPoints
 				+ ", attackPoints=" + attackPoints + "]";
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public int getHealthPoints() {
+		return healthPoints;
+	}
+
+	/**
+	 * 
+	 * @param healthPoints
+	 */
+	public void setHealthPoints(int healthPoints) {
+		this.healthPoints = healthPoints;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public int getAttackPoints() {
+		return attackPoints;
+	}
+
+	/**
+	 * 
+	 * @param attackPoints
+	 */
+	public void setAttackPoints(int attackPoints) {
+		this.attackPoints = attackPoints;
 	}
 
 }
